@@ -1,0 +1,3 @@
+rootProject.name = 'simple-cloud-config'
+include 'simple-cloud-config-server'
+include 'simple-cloud-config-client'

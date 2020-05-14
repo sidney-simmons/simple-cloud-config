@@ -1,0 +1,15 @@
+plugins {
+    id "com.sidneysimmons.gradle-plugin-docker" version "0.0.7"
+    id "com.sidneysimmons.gradle-plugin-external-properties" version "0.0.4"
+}
+
+group = "com.sidneysimmons.simple.cloud.config"
+version = "0.0.1"
+
+docker {
+    
+}
+
+dockerComposeUp.dependsOn dockerComposeBuild
+dockerComposeBuild.dependsOn ":simple-cloud-config-server:build"
+dockerComposeBuild.dependsOn ":simple-cloud-config-client:build"

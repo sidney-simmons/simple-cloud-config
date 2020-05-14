@@ -1,0 +1,10 @@
+version: '3'
+services:
+    client:
+        build: ./simple-cloud-config-client
+        ports:
+        - 8001:8080
+    server:
+        build: ./simple-cloud-config-server
+        ports:
+        - 8002:8080
