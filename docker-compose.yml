@@ -1,10 +1,10 @@
 version: '3'
 services:
-    client:
+    simple-cloud-config-client:
         build: ./simple-cloud-config-client
         ports:
         - 8080:8080
-    server:
+    simple-cloud-config-server:
         build: ./simple-cloud-config-server
         ports:
         - 8888:8888
