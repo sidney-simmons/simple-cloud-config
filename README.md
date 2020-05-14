@@ -8,7 +8,7 @@ simple-cloud-config is a gradle project meant to illustrate basic usage of a Spr
 
 ## Usage
 
-Clone the repository and execute the following.  The client runs on port 8001 and the server runs on port 8002.
+Clone the repository and execute the following.  The client runs on port 8080 and the server runs on port 8888.
 
 ```
 // Uses the docker-compose.yml file to start the client and the server
