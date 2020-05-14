@@ -3,6 +3,8 @@
 simple-cloud-config is a gradle project meant to illustrate basic usage of a Spring Cloud Config server for managing properties and a client application that consumes them.  Some of what's illustrated:
 
 * Spring Cloud Config server
+    * GitHub based repository
+    * Config files separated into directories per application
 * Spring Boot client
 * Gradle multi-project structure
 
@@ -13,6 +15,10 @@ Clone the repository and execute the following.  The client runs on port 8080 an
 ```
 // Uses the docker-compose.yml file to start the client and the server
 ./gradlew dockerComposeUp
+
+// Test that the externalized property is returned when you ping the client
+PS C:\Users\sassi\git\simple-cloud-config> curl -Uri http://localhost:8080 | Select-Object -ExpandProperty Content
+{"testProperty":"hi there!"}
 ```
 
 You can view the service logs by running the following.
