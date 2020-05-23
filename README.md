@@ -6,6 +6,8 @@ simple-cloud-config is a gradle project meant to illustrate basic usage of a Spr
     * GitHub based repository
     * Config files separated into directories per application
 * Spring Boot client
+    * Client access to properties via Spring
+    * Client access to properties via API
 * Gradle multi-project structure
 
 ## Usage
@@ -18,7 +20,7 @@ Clone the repository and execute the following.  The client runs on port 8080 an
 
 // Test that the externalized property is returned when you ping the client
 PS C:\Users\sassi\git\simple-cloud-config> curl -Uri http://localhost:8080 | Select-Object -ExpandProperty Content
-{"testProperty":"hi there!"}
+{"propertyViaSpring":"hi there!","propertyViaApi":"hello there!"}
 ```
 
 You can view the service logs by running the following.
