@@ -17,7 +17,7 @@ targetCompatibility = JavaVersion.VERSION_1_8
 dependencies {
     // Project
     implementation "org.springframework.boot:spring-boot-starter-web:2.3.8.RELEASE"
-    implementation "org.springframework.cloud:spring-cloud-starter-config:2.2.2.RELEASE"
+    implementation "org.springframework.cloud:spring-cloud-starter-config:2.2.6.RELEASE"
     
     // Required to use the "fail-fast", "retry.max-interval", and "retry.max-attempts" properties
     implementation "org.springframework.retry:spring-retry:1.2.5.RELEASE"
