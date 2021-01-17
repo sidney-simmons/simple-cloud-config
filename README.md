@@ -15,11 +15,14 @@ simple-cloud-config is a gradle project meant to illustrate basic usage of a Spr
 Clone the repository and execute the following.  The client runs on port 8080 and the server runs on port 8888.
 
 ```
-// Uses the docker-compose.yml file to start the client and the server
-./gradlew dockerComposeUp
+// Builds the client and server code
+./gradlew build
+
+// Builds and deploys the client and server images
+docker-compose up --build
 
 // Test that the externalized property is returned when you ping the client
-PS C:\Users\sassi\git\simple-cloud-config> curl -Uri http://localhost:8080 | Select-Object -ExpandProperty Content
+curl -Uri http://localhost:8080 | Select-Object -ExpandProperty Content
 {"propertyViaSpring":"hi there!","propertyViaApi":"hello there!"}
 ```
 
